@@ -1,0 +1,64 @@
+{
+  "name": "genpark-agentic-commerce-edi-856-advance-shipment-notice-asn-ucc128-skill",
+  "version": "1.0.0",
+  "description": "B2B EDI 856 ASN dispatch advice generator with GS1-128 / UCC-128 serialized shipping container barcode payload.",
+  "category": "agentic_commerce",
+  "author": "GenPark AI",
+  "website": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "main": "skills.py",
+  "tools": [
+    {
+      "name": "generate_edi_856_asn_payload",
+      "description": "B2B EDI 856 ASN dispatch advice generator with GS1-128 / UCC-128 serialized shipping container barcode payload.",
+      "sample_input": {
+        "shipment_id": "ASN-2026-9041",
+        "carrier_scac": "ODFL",
+        "bol_number": "BOL-9841203",
+        "pallets": [
+          {
+            "weight_lbs": 520.0,
+            "cartons": [
+              {
+                "carton_id": "CTN-01",
+                "items": [
+                  {
+                    "sku": "SKU-A",
+                    "quantity": 50
+                  },
+                  {
+                    "sku": "SKU-B",
+                    "quantity": 30
+                  }
+                ]
+              },
+              {
+                "carton_id": "CTN-02",
+                "items": [
+                  {
+                    "sku": "SKU-C",
+                    "quantity": 40
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "weight_lbs": 480.0,
+            "cartons": [
+              {
+                "carton_id": "CTN-03",
+                "items": [
+                  {
+                    "sku": "SKU-A",
+                    "quantity": 60
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
